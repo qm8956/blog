@@ -1,0 +1,26 @@
+spring:
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    mode: HTML5
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost/blog?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+    cassandra:
+      connect-timeout-millis: 120000
+
+file:
+  server:
+    url:
